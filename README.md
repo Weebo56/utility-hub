@@ -31,37 +31,7 @@ Everything runs in your browser.
 - 100% client-side — nothing leaves the device
 - No ads, no accounts, no trackers
 
-## Run locally
 
-Open `index.html` in any modern browser, or:
-
-```bash
-npx serve .
-```
-
-## Deploy to GitHub Pages
-
-1. Create a new public repository
-2. Upload the contents of this folder (or push via git)
-3. Repo **Settings → Pages → Source**: Deploy from branch `main`, folder `/ (root)`
-4. Site goes live at `https://<username>.github.io/<repo>/`
-
-## Structure
-
-```
-utility-hub/
-├── index.html
-├── css/styles.css
-├── js/
-│   ├── tools-data.js
-│   ├── app.js
-│   ├── tool-common.js
-│   └── tools-impl.js
-├── tools/          # one HTML page per tool
-├── icons/favicon.svg
-├── manifest.json
-└── README.md
-```
 
 ## Privacy
 
