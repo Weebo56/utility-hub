@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free privacy-first everyday utility tools. Calculators, converters, generators. Everything runs in your browser. No accounts, no tracking.">
+  <meta name="theme-color" content="#0f172a">
+  <title>UtilityHub — Everyday Tools That Just Work</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <script>
+    (function(){const t=localStorage.getItem('theme')||'system';const d=t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);})();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">UH</span><span class="logo-text">UtilityHub</span></a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Everyday tools that just work</h1>
+        <p class="hero-sub">Free. Private. Offline-ready. No accounts. No tracking. Everything runs in your browser.</p>
+        <div class="search-wrap">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="search" id="tool-search" placeholder="Search tools… (tip, age, password, color…)" autocomplete="off" aria-label="Search tools">
+          <kbd class="search-kbd">/</kbd>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="quick-pills" id="category-pills">
+        <button class="pill active" data-cat="all">All</button>
+        <button class="pill" data-cat="money">Money</button>
+        <button class="pill" data-cat="time">Time</button>
+        <button class="pill" data-cat="text">Text</button>
+        <button class="pill" data-cat="health">Health</button>
+        <button class="pill" data-cat="convert">Converters</button>
+        <button class="pill" data-cat="generate">Generators</button>
+        <button class="pill" data-cat="life">Everyday</button>
+        <button class="pill" data-cat="visual">Visual</button>
+      </div>
+      <div class="tools-grid" id="tools-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <p>No tools match your search.</p>
+        <button class="btn" id="clear-search">Clear search</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>UtilityHub</strong>
+        <p>Everything runs locally in your browser. Nothing is ever uploaded or tracked.</p>
+      </div>
+      <div class="footer-links">
+        <span class="version">v1.0.0</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/tools-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
